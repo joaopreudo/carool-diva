@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css">
+  <title>BeachSpot</title>
+</head>
+<style>
+    /* Reset básico */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  /* Grid layout */
+  .grid-container {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    grid-template-rows: 70px 1fr;
+    grid-template-areas:
+      "sidebar header"
+      "sidebar main";
+    height: 100vh;
+  }
+  
+  /* Sidebar */
+  .sidebar {
+    grid-area: sidebar;
+    background-color: #002c87;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 0;
+  }
+  
+  .logo-circle {
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border-radius: 50%;
+    margin-bottom: 40px;
+  }
+  
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .nav-links a,
+  .logout a {
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+  }
+  
+  .logout {
+    margin-bottom: 20px;
+  }
+  
+  /* Header */
+  .header {
+    grid-area: header;
+    background-color: #ffffffcc;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 24px;
+    border-bottom: 2px solid #73bff6;
+  }
+  
+  .header-left {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #0138b4;
+  }
+  
+  .header-right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  
+  /* Search */
+  .search {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    border-radius: 50px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #73bff6;
+    transition: width 0.4s ease;
+  }
+  
+  .search input {
+    border: none;
+    outline: none;
+    width: 180px;
+    padding: 8px 12px;
+    background: transparent;
+    color: #0138b4;
+    font-weight: 500;
+    display: none;
+  }
+  
+  .search:hover {
+    width: 220px;
+    justify-content: flex-start;
+    padding-left: 12px;
+  }
+  
+  .search:hover input {
+    display: inline-block;
+  }
+  
+  /* About Link */
+  .about-link {
+    text-decoration: none;
+    color: #0138b4;
+    font-weight: bold;
+  }
+  
+  /* Main */
+  .main-content {
+    grid-area: main;
+    background: linear-gradient(135deg, #0138b4, #73bff6);
+    padding: 32px;
+    color: white;
+    overflow-y: auto;
+  }
+ 
+</style>
+<body>
+  <div class="grid-container">
+    
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="logo-circle">
+      </div>
+      <nav class="nav-links">
+        <a href="#"><span>🏠</span></a>
+        <a href="#"><span>👤</span></a>
+        <a href="#"><span>📅</span></a>
+        <a href="#"><span>ℹ️</span></a>
+      </nav>
+      <div class="logout">
+        <a href="#"><span>🚪</span></a>
+      </div>
+    </aside>
+
+    <!-- Header -->
+    <header class="header">
+      <div class="header-left">
+        <div class="logo-text">BeachSpot</div>
+      </div>
+      
+      <div class="header-right">
+        <div class="search">
+          <span>🔍</span>
+          <input type="text" placeholder="Pesquisar..." />
+        </div>
+        <a href="#" class="about-link">Sobre</a>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <section class="info">
+            <div class="box">
+                <h2> Sobre o BeachSpot</h2>
+                <p> O BeachSpot nasceu com um propósito simples: facilitar e melhorar a experiência de quem deseja aproveitar o melhor da praia, sem  se preocupar com a correria de encontrar a barraca ideal. Somos uma plataforma dedicada à reservas de barraca de praia, criada para aqueles que amam o mar, o sol e a boa tranquilidade de uma sombra, mas preferem evitar o estresse da improvisação.</p>
+            
+        
+                <h2>O que oferecemos</h2>
+                <p>No BeachSpot, trabalhamos com uma seleção de barracas em diversas praias, garantindo que você tenha um lugar reservado à sua espera. Além disso, nossa plataforma oferece descrições detalhadas, fotos e avaliações, para que você saiba exatamente o que esperar. </p>
+            </div>
+        </section>
+    </main>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
