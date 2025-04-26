@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar Conta</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  body {
+    background: linear-gradient(to right, #045abd, rgb(22, 123, 238), #66b3ff);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .container {
+    background: rgb(255, 255, 255);
+    padding: 40px;
+    border-radius: 50px;
+    width: 700px;
+    height: 500px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+  
+  h2 {
+    margin-bottom: 20px;
+color: #005fcc;
+  }
+  
+  .social-icons img {
+    width: 30px;
+    margin: 0 10px;
+    cursor: pointer;
+  }
+  
+  .subtitle {
+    font-size: 0.9em;
+    color: gray;
+    margin: 15px 0;
+  }
+  
+  form input {
+    width: 100%;
+    padding: 20px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  button {
+    width: 40%;
+    height: 50px;
+    padding: 10px;
+    background-color: #0077ff;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 115%;
+    margin-top: 29px;
+  }
+  
+  button:hover {
+    background-color: #005fcc;
+  }
+</style>
+<body>
+    <div class="container">
+        <div class="form-box">
+          <h2>Criar Conta</h2>
+          <div class="social-icons">
+            <img src="facebook-icon.png" alt="Facebook">
+            <img src="google-icon.png" alt="Google">
+          </div>
+          <p class="subtitle">ou use seu e-mail para cadastro</p>
+          <form id="signup-form">
+            <input type="text" id="nome" placeholder="Nome" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="password" id="senha" placeholder="Senha" required>
+            <button type="submit">Criar</button>
+          </form>
+        </div>
+      </div>
+      <script src="script.js"></script>
+
+
+
+    </div>
+</body>
+</html>
