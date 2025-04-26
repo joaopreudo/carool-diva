@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BeachSpot</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #0138b4, #73bff6);
+      height: 100vh;
+      font-family: 'Segoe UI', sans-serif;
+      color: white;
+      display: flex;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .secao-cadastro {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      margin: 100px 0px 0px 30px;
+      margin-left: 60px;
+      z-index: 1;
+    }
+
+    .secao-cadastro h1 {
+      font-size: 100px;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .btn {
+      background-color: white;
+      font-weight: 645;
+      width: 150px;
+      padding: 15px 30px;
+      text-align: center;
+      border-radius: 30px;
+      font-size: 1.2rem;
+      text-decoration: none;
+      color: black;
+    }
+
+    #btn-criar {
+      background-color: rgba(255, 255, 255, 0.4);
+    }
+
+    .ondinha {
+      position: absolute;
+      right: 0;
+      top: 0;
+      height: 100%;
+      z-index: 0;
+    }
+
+    .ondinha svg {
+      height: 100%;
+    }
+  </style>
+</head>
+<body>
+  <section class="secao-cadastro">
+    <h1>BeachSpot</h1>
+    <div class="container">
+      <a href="#" class="btn" id="btn-entrar">Entrar</a>
+      <a href="#" class="btn" id="btn-criar">Criar Conta</a>
+    </div>
+  </section>
+
+  <div class="ondinha">
+    <svg viewBox="0 0 500 1000" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,0 C200,200 200,800 0,1000 L500,1000 L500,0 Z" fill="white" opacity="0.2" />
+    </svg>
+  </div>
+</body>
+</html>
